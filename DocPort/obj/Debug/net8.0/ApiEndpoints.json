@@ -1,0 +1,322 @@
+[
+  {
+    "ContainingType": "DocPort.Controllers.ContentHoldersController",
+    "Method": "Add",
+    "RelativePath": "api/ContentHolders",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "newCh",
+        "Type": "DocPort.Models.ViewModels.ContentHolderPostViewModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "DocPort.Models.ViewModels.ContentHolderViewModel",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "DocPort.Controllers.ContentHoldersController",
+    "Method": "Update",
+    "RelativePath": "api/ContentHolders/{chID}",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "chID",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "ch",
+        "Type": "DocPort.Models.ViewModels.ContentHolderPostViewModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "DocPort.Models.ViewModels.ContentHolderViewModel",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "DocPort.Controllers.DirectoryController",
+    "Method": "DeleteTrashes",
+    "RelativePath": "api/Directory",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "directoryItems",
+        "Type": "System.Collections.Generic.List\u00601[[DocPort.Models.ViewModels.DirectoryPatchViewModel, DocPort, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[DocPort.Models.ViewModels.DirectoryViewModel, DocPort, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "DocPort.Controllers.DirectoryController",
+    "Method": "GetByDirectoryID",
+    "RelativePath": "api/Directory/{directoryID}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "directoryID",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[DocPort.Models.ViewModels.DirectoryViewModel, DocPort, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "DocPort.Controllers.DirectoryController",
+    "Method": "UpdateDirectory",
+    "RelativePath": "api/Directory/{directoryID}",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "directoryID",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "directoryItem",
+        "Type": "DocPort.Models.ViewModels.DirectoryPatchViewModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "DocPort.Models.ViewModels.DirectoryViewModel",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "DocPort.Controllers.DirectoryController",
+    "Method": "DeleteAll",
+    "RelativePath": "api/Directory/all",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[DocPort.Models.ViewModels.DirectoryViewModel, DocPort, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "DocPort.Controllers.DirectoryController",
+    "Method": "GetBin",
+    "RelativePath": "api/Directory/bin",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[DocPort.Models.ViewModels.DirectoryViewModel, DocPort, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "DocPort.Controllers.DirectoryController",
+    "Method": "GetNavigation",
+    "RelativePath": "api/Directory/nav/type={type}\u0026id={ID}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "type",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "ID",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "DocPort.Models.ViewModels.DocNavigationViewModel",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "DocPort.Controllers.DirectoryController",
+    "Method": "UpdateIsTrashed",
+    "RelativePath": "api/Directory/trash",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "directoryItems",
+        "Type": "System.Collections.Generic.List\u00601[[DocPort.Models.ViewModels.DirectoryPatchViewModel, DocPort, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[DocPort.Models.ViewModels.DirectoryViewModel, DocPort, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "DocPort.Controllers.DocsController",
+    "Method": "Add",
+    "RelativePath": "api/Docs",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "newDoc",
+        "Type": "DocPort.Models.ViewModels.DocPostViewModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "DocPort.Models.ViewModels.DocViewModel",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "DocPort.Controllers.DocsController",
+    "Method": "Update",
+    "RelativePath": "api/Docs/{docID}",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "docID",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "doc",
+        "Type": "DocPort.Models.ViewModels.DocPostViewModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "DocPort.Models.ViewModels.DocViewModel",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "DocPort.Controllers.DocsController",
+    "Method": "GetExplorer",
+    "RelativePath": "api/Docs/explorer/{docID}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "docID",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "DocPort.Models.ViewModels.DocExplorerViewModel",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]
